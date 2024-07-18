@@ -29,3 +29,32 @@ for (let index = 0; index < myLibrary.length; index++) {
 }
 
 document.getElementById("book-list").innerHTML = bookContent;
+
+const addNewBook = document.getElementById("addNewBook");
+const dialog = document.getElementById("dialogNewBook");
+const cancel = document.getElementById("cancel");
+const submitBook = document.getElementById("submitBook");
+
+addNewBook.addEventListener("click", function () {
+  dialog.show();
+});
+
+cancel.addEventListener("click", function () {
+  dialog.close();
+});
+
+submitBook.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const newTitle = document.getElementById("bookTitle").value;
+  const newAuthor = document.getElementById("bookAuthor").value;
+  const newPages = document.getElementById("bookPages").value;
+  const newRead = document.getElementById("bookRead").checked;
+
+  addBookToLibrary(newTitle, newAuthor, newPages, newRead);
+  console.log(newTitle);
+  console.log(newAuthor);
+  console.log(newPages);
+  console.log(newRead);
+  dialog.close();
+});

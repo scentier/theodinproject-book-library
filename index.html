@@ -6,6 +6,32 @@
     <title>Book Library Project</title>
   </head>
   <body>
+    <dialog id="dialogNewBook">
+      <p>Add New Book</p>
+      <form method="dialog">
+        <p>
+          <label for="bookTitle">Title : </label
+          ><input type="text" name="bookTitle" id="bookTitle" />
+        </p>
+        <p>
+          <label for="bookAuthor">Author : </label
+          ><input type="text" name="bookAuthor" id="bookAuthor" />
+        </p>
+        <p>
+          <label for="bookPages">Pages : </label
+          ><input type="number" name="bookPages" id="bookPages" />
+        </p>
+        <p>
+          <label for="bookRead">Have You Read The Book?</label>
+          <input type="checkbox" id="bookRead" />
+        </p>
+        <div>
+          <button type="reset" id="cancel">Cancel</button
+          ><button type="submit" id="submitBook">Submit</button>
+        </div>
+      </form>
+    </dialog>
+    <div><button id="addNewBook">Add New Book</button></div>
     <div id="book-list"></div>
   </body>
   <script src="index.js"></script>
